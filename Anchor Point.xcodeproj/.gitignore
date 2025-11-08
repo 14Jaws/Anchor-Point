@@ -1,0 +1,16 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserdatad/
+*.xcworkspace/xcuserdata/
+*.xcscmblueprint
+
+# SwiftPM
+.build/
+
+# CocoaPods
+Pods/
+*.xcworkspace
+
+# General
+.DS_Store

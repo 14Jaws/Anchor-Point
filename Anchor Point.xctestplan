@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "70D9DC63-796B-4B9D-ADDB-9F2034A03102",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Anchor Point.xcodeproj",
+      "identifier" : "7488BB8B2EBEA022003F741F",
+      "name" : "Anchor Point"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Anchor Point.xcodeproj",
+        "identifier" : "7488BB9A2EBEA023003F741F",
+        "name" : "Anchor PointTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Anchor Point.xcodeproj",
+        "identifier" : "7488BBA42EBEA023003F741F",
+        "name" : "Anchor PointUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

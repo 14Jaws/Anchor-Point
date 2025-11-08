@@ -27,6 +27,7 @@
 		7488BB8C2EBEA022003F741F /* Anchor Point.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anchor Point.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7488BB9B2EBEA023003F741F /* Anchor PointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anchor PointTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7488BBA52EBEA023003F741F /* Anchor PointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anchor PointUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7488BBC62EBFC03C003F741F /* Anchor Point.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Anchor Point.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		7488BB832EBEA022003F741F = {
 			isa = PBXGroup;
 			children = (
+				7488BBC62EBFC03C003F741F /* Anchor Point.xctestplan */,
 				7488BB8E2EBEA022003F741F /* Anchor Point */,
 				7488BB9E2EBEA023003F741F /* Anchor PointTests */,
 				7488BBA82EBEA023003F741F /* Anchor PointUITests */,

@@ -1,66 +1,63 @@
-//
-//  ContentView.swift
-//  Anchor Point
-//
-//  Created by Trudy's Computer on 11/7/25.
-//
-
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @State private var showAlert = false
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        NavigationStack {
+            VStack(spacing: 24) {
+                Text("Welcome to Anchor Point")
+                    .font(.title).bold()
+
+                // Big button you can tap
+                Button {
+                    showAlert = true
+                } label: {
+                    Text("Show Alert")
+                        .font(.headline)
+                        .padding(.vertical, 14)
+                        .padding(.horizontal, 24)
+                        .background(Color.gray.opacity(0.15))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .onDelete(perform: deleteItems)
+
+                // Go to another screen
+                NavigationLink("Open Demo Screen") {
+                    DemoView()
+                }
+                .font(.headline)
             }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
+            .padding()
+            .navigationTitle("Home")
             .toolbar {
-#if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button("Save") {
+                        print("Save tapped")
                     }
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+            .alert("It works!", isPresented: $showAlert) {
+                Button("OK", role: .cancel) { }
             }
         }
     }
 }
 
+// A second screen to prove navigation works
+struct DemoView: View {
+    var body: some View {
+        VStack(spacing: 16) {
+            Text("Demo Screen")
+                .font(.title).bold()
+            Text("Now your app has more than just 'Hello'.")
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        }
+        .padding()
+        .navigationTitle("Demo")
+    }
+}
+
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
