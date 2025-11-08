@@ -1,6 +1,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
+                }
+        }
+    }
+}
+
+// ---- Home tab ----
+struct HomeView: View {
     @State private var showAlert = false
 
     var body: some View {
@@ -9,19 +26,15 @@ struct ContentView: View {
                 Text("Welcome to Anchor Point")
                     .font(.title).bold()
 
-                // Big button you can tap
-                Button {
+                Button("Show Alert") {
                     showAlert = true
-                } label: {
-                    Text("Show Alert")
-                        .font(.headline)
-                        .padding(.vertical, 14)
-                        .padding(.horizontal, 24)
-                        .background(Color.gray.opacity(0.15))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
+                .font(.headline)
+                .padding(.vertical, 14)
+                .padding(.horizontal, 24)
+                .background(Color.gray.opacity(0.15))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
 
-                // Go to another screen
                 NavigationLink("Open Demo Screen") {
                     DemoView()
                 }
@@ -31,9 +44,7 @@ struct ContentView: View {
             .navigationTitle("Home")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
-                        print("Save tapped")
-                    }
+                    Button("Save") { print("Save tapped") }
                 }
             }
             .alert("It works!", isPresented: $showAlert) {
@@ -43,13 +54,12 @@ struct ContentView: View {
     }
 }
 
-// A second screen to prove navigation works
+// ---- A second screen to prove navigation works ----
 struct DemoView: View {
     var body: some View {
         VStack(spacing: 16) {
-            Text("Demo Screen")
-                .font(.title).bold()
-            Text("Now your app has more than just 'Hello'.")
+            Text("Demo Screen").font(.title).bold()
+            Text("Now your app has a Home tab and Settings tab.")
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
         }
@@ -58,6 +68,19 @@ struct DemoView: View {
     }
 }
 
-#Preview {
-    ContentView()
+// ---- Settings tab ----
+struct SettingsView: View {
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section(header: Text("About")) {
+                    Text("Version 0.1")
+                    Text("Built by Trudy 💙")
+                }
+            }
+            .navigationTitle("Settings")
+        }
+    }
 }
+
+#Preview { ContentView() }
