@@ -1,0 +1,30 @@
+{
+  "images" : [
+    {"idiom" : "ios-marketing", "size" : "1024x1024", "scale" : "1x", "filename" : "AppIcon-1024-light.png"},
+
+    {"idiom" : "iphone", "size" : "60x60", "scale" : "3x", "filename" : "AppIcon-180-light.png"},
+    {"idiom" : "iphone", "size" : "60x60", "scale" : "2x", "filename" : "AppIcon-120-light.png"},
+    {"idiom" : "iphone", "size" : "29x29",  "scale" : "3x", "filename" : "AppIcon-87-light.png"},
+    {"idiom" : "iphone", "size" : "29x29",  "scale" : "2x", "filename" : "AppIcon-58-light.png"},
+    {"idiom" : "iphone", "size" : "20x20",  "scale" : "3x", "filename" : "AppIcon-60-light.png"},
+    {"idiom" : "iphone", "size" : "20x20",  "scale" : "2x", "filename" : "AppIcon-40-light.png"},
+
+    {"idiom" : "ipad",   "size" : "83.5x83.5", "scale" : "2x", "filename" : "AppIcon-167-light.png"},
+    {"idiom" : "ipad",   "size" : "76x76",     "scale" : "2x", "filename" : "AppIcon-152-light.png"},
+    {"idiom" : "ipad",   "size" : "40x40",     "scale" : "2x", "filename" : "AppIcon-80-light.png"},
+
+    {"idiom" : "ios-marketing", "size" : "1024x1024", "scale" : "1x", "filename" : "AppIcon-1024-dark.png"},
+
+    {"idiom" : "iphone", "size" : "60x60", "scale" : "3x", "filename" : "AppIcon-180-dark.png"},
+    {"idiom" : "iphone", "size" : "60x60", "scale" : "2x", "filename" : "AppIcon-120-dark.png"},
+    {"idiom" : "iphone", "size" : "29x29",  "scale" : "3x", "filename" : "AppIcon-87-dark.png"},
+    {"idiom" : "iphone", "size" : "29x29",  "scale" : "2x", "filename" : "AppIcon-58-dark.png"},
+    {"idiom" : "iphone", "size" : "20x20",  "scale" : "3x", "filename" : "AppIcon-60-dark.png"},
+    {"idiom" : "iphone", "size" : "20x20",  "scale" : "2x", "filename" : "AppIcon-40-dark.png"},
+
+    {"idiom" : "ipad",   "size" : "83.5x83.5", "scale" : "2x", "filename" : "AppIcon-167-dark.png"},
+    {"idiom" : "ipad",   "size" : "76x76",     "scale" : "2x", "filename" : "AppIcon-152-dark.png"},
+    {"idiom" : "ipad",   "size" : "40x40",     "scale" : "2x", "filename" : "AppIcon-80-dark.png"}
+  ],
+  "info" : { "version" : 1, "author" : "xcode" }
+}
